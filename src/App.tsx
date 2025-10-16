@@ -18,9 +18,11 @@ import ScrollToTop from "./components/ScrollToTop"
 import AdminDashboard from "./pages/admin/AdminDashboard"
 import AdminServices from "./pages/admin/AdminServices"
 import AdminCareers from "./pages/admin/AdminCareers"
-import ADcontacts from "./pages/admin/adcontacts"
 import ShortcutListener from "./components/ShortcutListener"
 import ProtectedRoute from "./components/ProtectedRoute"
+import AdContacts from "./pages/admin/AdContacts"
+
+
 
 
 const queryClient = new QueryClient()
@@ -60,7 +62,11 @@ const AppContent = () => {
           <Route path="/admin" element={<ProtectedRoute element={<AdminDashboard />} />} />
 <Route path="/admin/services" element={<ProtectedRoute element={<AdminServices />} />} />
 <Route path="/admin/careers" element={<ProtectedRoute element={<AdminCareers />} />} />
-<Route path="/admin/contacts" element={<ProtectedRoute element={<ADcontacts />} />} />
+<Route path="/admin/contacts" element={<ProtectedRoute element={<AdContacts />} />} />
+
+
+
+
 
         </Routes>
       </main>
