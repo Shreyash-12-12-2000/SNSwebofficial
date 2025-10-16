@@ -98,28 +98,29 @@ const functions = [
         className="lg:w-1/2 text-left max-[768px]:text-center"
       >
         <h1
-          className="
-            relative text-5xl md:text-7xl lg:text-8xl 
-            font-extrabold tracking-tight mb-6 leading-tight 
-            text-[#F9FAFB] drop-shadow-lg
-          "
-        >
-          {/* Mobile Version (only visible below md) */}
-          <span className="block md:hidden">
-            All Your Business{" "}
-            <span className="bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] text-transparent bg-clip-text shiny-effect">
-              Solutions
-            </span>
-          </span>
+  className="
+    relative text-5xl md:text-7xl lg:text-8xl 
+    font-extrabold tracking-tight mb-6 leading-tight 
+    text-[#F9FAFB] drop-shadow-lg
+  "
+>
+  {/* Mobile Version (only visible below md) */}
+  <span className="block md:hidden text-center w-full">
+    All Your Business{" "}
+    <span className="bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] text-transparent bg-clip-text shiny-effect">
+      Solutions
+    </span>
+  </span>
 
-          {/* Desktop Version (hidden on mobile, visible md+) */}
-          <span className="hidden md:block">
-            All Your Business{" "}
-            <span className="bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] text-transparent bg-clip-text whitespace-nowrap shiny-effect">
-              Solutions In One Place
-            </span>
-          </span>
-        </h1>
+  {/* Desktop Version (hidden on mobile, visible md+) */}
+  <span className="hidden md:block">
+    All Your Business{" "}
+    <span className="bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] text-transparent bg-clip-text whitespace-nowrap shiny-effect">
+      Solutions In One Place
+    </span>
+  </span>
+</h1>
+
 
         <p
           className="
