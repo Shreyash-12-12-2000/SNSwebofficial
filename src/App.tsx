@@ -20,7 +20,7 @@ import AdminServices from "./pages/admin/AdminServices"
 import AdminCareers from "./pages/admin/AdminCareers"
 import ShortcutListener from "./components/ShortcutListener"
 import ProtectedRoute from "./components/ProtectedRoute"
-import AdContacts from "./pages/admin/AdContacts"
+import AContacts from "./pages/admin/AContact"
 
 
 
@@ -62,7 +62,7 @@ const AppContent = () => {
           <Route path="/admin" element={<ProtectedRoute element={<AdminDashboard />} />} />
 <Route path="/admin/services" element={<ProtectedRoute element={<AdminServices />} />} />
 <Route path="/admin/careers" element={<ProtectedRoute element={<AdminCareers />} />} />
-<Route path="/admin/contacts" element={<ProtectedRoute element={<AdContacts />} />} />
+<Route path="/admin/contacts" element={<ProtectedRoute element={<AContacts />} />} />
 
 
 
