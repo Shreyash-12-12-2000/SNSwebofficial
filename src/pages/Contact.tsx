@@ -220,67 +220,7 @@ const Contact = () => {
   ];
 
   return (
-    <div ref={containerRef} className="min-h-screen relative overflow-hidden bg-[#050517] text-white">
-      <ToastContainer />
-
-      {/* Advanced Animated Background */}
-      <div className="fixed inset-0 -z-10">
-        {/* Gradient mesh - subtle center dark overlay to preserve deep cosmic black */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(5,5,23,0.0), rgba(5,5,23,0.15))" }} />
-
-        {/* Animated orbs */}
-        <motion.div
-          animate={{
-            x: [0, 100, -50, 0],
-            y: [0, -80, 50, 0],
-            scale: [1, 1.2, 0.8, 1],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-20 left-10 w-[600px] h-[600px] rounded-full opacity-20 blur-[120px]"
-          style={{
-            background: "radial-gradient(circle, #00FFD5 0%, transparent 70%)",
-          }}
-        />
-        <motion.div
-          animate={{
-            x: [0, -80, 60, 0],
-            y: [0, 100, -50, 0],
-            scale: [1, 0.8, 1.3, 1],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute bottom-20 right-10 w-[700px] h-[700px] rounded-full opacity-20 blur-[120px]"
-          style={{
-            background: "radial-gradient(circle, #FD019C 0%, transparent 70%)",
-          }}
-        />
-        <motion.div
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 40,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-10 blur-[100px]"
-          style={{
-            background: "conic-gradient(from 0deg, #00FFD5, #FD019C, #FFB200, #00FFD5)",
-          }}
-        />
-
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]" />
-      </div>
-
+    <div ref={containerRef} className="min-h-screen relative overflow-hidden bg-[#050517] text-white">  
       {/* Hero Section */}
       <section className="relative pt-32 pb-20">
          {/* Decorative background gradient behind particles */}
@@ -1230,11 +1170,6 @@ const Contact = () => {
   </div>
 </section>
 
-
-
-
-
-
      {/* FAQ Section - Futuristic Neon Glass Design */}
 <section className="relative py-32 bg-[#050517] overflow-hidden">
    {/* Decorative background gradient behind particles */}
@@ -1450,7 +1385,6 @@ const Contact = () => {
     </motion.div>
   ))}
 </div>
-
 
 
 </section>
