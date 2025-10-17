@@ -193,7 +193,7 @@ All colors MUST be HSL.
   display: inline-block;
   overflow: hidden;
   font-weight: bold;
-  font-size: 100px; /* adjust size */
+  font-size: 80px; /* adjust size */
   font-family: 'Playfair Display', serif;
   /* gradient text color */
   background: linear-gradient(

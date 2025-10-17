@@ -1,35 +1,31 @@
-import { useEffect } from "react";
-import Lenis from "lenis";
+import { useEffect } from "react"
+import Lenis from "@studio-freight/lenis"
 
 interface SmoothScrollProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const SmoothScrollProvider = ({ children }: SmoothScrollProviderProps) => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.8, // slower = smoother glide
-      easing: (t) => 1 - Math.pow(2, -10 * t), // very natural easing
-      gestureDirection: "vertical",
+      duration: 1.8, // smooth glide duration
+      easing: (t: number) => 1 - Math.pow(2, -10 * t), // natural easing
       smoothWheel: true,
-      smoothTouch: true,
-      touchMultiplier: 2,
       normalizeWheel: true,
-    } as any);
+      // Remove 'gestureDirection' and 'smoothTouch'
+    } as any)
 
     const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
 
-    requestAnimationFrame(raf);
+    requestAnimationFrame(raf)
 
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+    return () => lenis.destroy()
+  }, [])
 
-  return <>{children}</>;
-};
+  return <>{children}</>
+}
 
-export default SmoothScrollProvider;
+export default SmoothScrollProvider

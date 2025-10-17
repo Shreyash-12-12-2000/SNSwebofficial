@@ -77,7 +77,7 @@ const functions = [
     loop
     playsInline
     preload="auto"
-    className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
+    className="absolute inset-0 w-full h-full object-cover  pointer-events-none"
   >
     <source src="/bg.mp4" type="video/mp4" />
     Your browser does not support the video tag.
@@ -105,7 +105,7 @@ const functions = [
   "
 >
   {/* Mobile Version (only visible below md) */}
-  <span className="block md:hidden text-center w-full">
+  <span className="block md:hidden text-center w-full mt-[40px]">
     All Your Business{" "}
     <span className="bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] text-transparent bg-clip-text shiny-effect">
       Solutions
@@ -122,14 +122,15 @@ const functions = [
 </h1>
 
 
-        <p
-          className="
-            text-xl md:text-2xl text-[#F9FAFB]/90 mb-12 drop-shadow-md 
-            max-[480px]:text-sm max-[640px]:text-base max-[640px]:mb-6
-          "
-        >
-          Start your journey with SNSweb — Designed for speed & solution.
-        </p>
+       <p
+  className="
+    text-xl md:text-2xl text-[#F9FAFB]/90 mb-12 drop-shadow-md
+    max-[480px]:text-sm max-[640px]:text-base max-[640px]:mb-6
+    w-full break-words whitespace-normal px-4
+  "
+>
+  Start your journey with SNSweb — Designed for speed & solution.
+</p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-start items-center max-[768px]:justify-center">
           <Button
@@ -517,7 +518,15 @@ const functions = [
 <img
   src="spaceman.svg"
   alt="Technology"
-  className="w-full sm:w-11/12 md:w-3/4 lg:w-2/3 h-auto object-contain cursor-pointer ml-0 lg:ml-[70px] rounded-2xl mt-[-50px]"
+  className="
+    w-full sm:w-11/12 md:w-3/4 lg:w-2/3   /* Width responsive */
+    h-auto
+    object-contain
+    cursor-pointer
+    rounded-2xl
+    mt-[-60px]
+    mx-auto lg:ml-[70px] lg:mr-0    /* Mobile me center, desktop me right shift */
+  "
 />
 
 
@@ -540,7 +549,7 @@ const functions = [
   className="inline-block text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide
              text-transparent bg-clip-text 
              bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]
-             px-6 py-3 rounded-lg
+             px-6 py-3 rounded-lg mt-[70px]
              bg-gradient-to-tr from-[#00FFD6] to-[#FF4D6D]
              shadow-[0_0_25px_rgba(255,77,109,0.6)]"
 >
@@ -1107,18 +1116,27 @@ const functions = [
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
         className="relative group flex justify-center lg:justify-start"
-      >
-        <motion.img
-          src="/tech.png"
-          alt="Technology"
-          className="w-full h-96 sm:h-80 md:h-72 lg:h-[600px] object-cover cursor-pointer ml-0 lg:ml-[70px] rounded-2xl"
-          animate={{ y: [0, -50, 0] }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+      ><motion.img
+  src="/tech.png"
+  alt="Technology"
+  className="
+    w-full                     /* always full width of container */
+    h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px]  /* consistent heights */
+    object-cover               /* keeps it filled */
+    object-center              /* center the image crop */
+    cursor-pointer
+    rounded-2xl
+    mx-auto lg:ml-[70px]       /* center on mobile, shift right on desktop */
+    overflow-visible
+  "
+  animate={{ y: [0, -40, 0] }}
+  transition={{
+    duration: 4,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+/>
+
       </motion.div>
 
     </div>

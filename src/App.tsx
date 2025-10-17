@@ -27,13 +27,6 @@ import AContacts from "./pages/admin/AContact"
 
 const queryClient = new QueryClient()
 
-// Inside App.tsx
-const AdminProtectedRoute = ({ element }: { element: JSX.Element }) => {
-  const isAdmin = localStorage.getItem("isAdmin") === "true"
-  return isAdmin ? element : <Navigate to="/" />
-}
-
-
 // ✅ This child component lives INSIDE BrowserRouter
 const AppContent = () => {
   const location = useLocation()
@@ -64,10 +57,6 @@ const AppContent = () => {
 <Route path="/admin/careers" element={<ProtectedRoute element={<AdminCareers />} />} />
 <Route path="/admin/contacts" element={<ProtectedRoute element={<AContacts />} />} />
 
-
-
-
-
         </Routes>
       </main>
 
@@ -76,22 +65,22 @@ const AppContent = () => {
   )
 }
 
-// ✅ Main App
+// Main App
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <SmoothScrollProvider>
-          {/* BrowserRouter wraps AppContent */}
-          <BrowserRouter>
+        <BrowserRouter>
+          {/* Wrap content in SmoothScrollProvider */}
+          <SmoothScrollProvider>
             <AppContent />
-          </BrowserRouter>
-        </SmoothScrollProvider>
+          </SmoothScrollProvider>
+        </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;
